@@ -1,0 +1,85 @@
+﻿<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+  <DialogueNode>
+    <Name>Nomai2</Name>
+
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>... so are you gonna talk or what?</Text>
+        <DialogueTarget>Start</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>Start</Name>
+    <Dialogue>
+      <Page>...</Page>
+      <Page>Yeah I just wanted to be a little dramatic haha.</Page>
+    </Dialogue>
+    <DialogueTarget>Menu</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>Menu</Name>
+    <Dialogue>
+      <Page>So what's up? I will answer all your questions truthfully and canonically.</Page>
+    </Dialogue>
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>What's your name?</Text>
+        <DialogueTarget>Name</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>What's the name of your species?</Text>
+        <DialogueTarget>Species</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>How do you know my language?</Text>
+        <DialogueTarget>Language</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>Can you use that magic staff over there to project your thoughts into my brain?</Text>
+        <DialogueTarget>Staff</DialogueTarget>
+      </DialogueOption>
+
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>Name</Name>
+    <Dialogue>
+      <Page>My name is Scombroid the Third.</Page>
+    </Dialogue>
+    <DialogueTarget>Menu</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>Species</Name>
+    <Dialogue>
+      <Page>We are called the Grombo, and our space station is called Gromboville, and our home moon is called Grombo-moon, and the ringed planet it orbits is called Grombo-ringed-planet.</Page>
+      <Page>In our native language, also called Grombo, Grombo means "guy who lives on the moon or also maybe on a space station".</Page>
+      <Page>Well and then it also means "the language that the guy who lives on the moon or also maybe on a space station speaks".</Page>
+     </Dialogue>
+    <DialogueTarget>Menu</DialogueTarget>
+  </DialogueNode>  
+  
+  <DialogueNode>
+    <Name>Language</Name>
+    <Dialogue>
+      <Page>I don't, we're in like, a magic simulation thing right now, like this thing is literally reading our minds and stuff.</Page>
+      <Page>You're just speaking Grombo to me right now honestly.</Page>
+     </Dialogue>
+    <DialogueTarget>Menu</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>Staff</Name>
+    <Dialogue>
+      <Page>Yeah sure thing bro.</Page>
+      <Page>When I'm done you can project your thoughts into my brain too.</Page>
+      <Page>Then I'm going to dip and just kinda walk into the river.</Page>
+      <Page>Kinda messed up I know, but I'm like 50 gorillion years old and trapped inside this simulation forever so...</Page>
+      <Page>Yeah... Okay doing the projection thing now. Also my throat hurts so I will never speak again. Okay bye.</Page>
+    </Dialogue>
+  </DialogueNode>
+</DialogueTree>

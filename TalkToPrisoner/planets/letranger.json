@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "name": "Dreamworld",
+  "Props": {
+    "dialogue": [
+      {
+        "pathToExistingDialogue": "Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/InteractReceiver",
+        "xmlFile": "planets/dialogue.xml"
+      }
+    ]
+  }
+}
