@@ -4,7 +4,23 @@
 
     <DialogueOptionsList>
       <DialogueOption>
-        <Text>... so are you gonna talk or what?</Text>
+        <Text>...</Text>
+        <DialogueTarget>Wait</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>Wait</Name>
+    <Dialogue>
+      <Page>...</Page>
+      <Page>.....</Page>
+      <Page>...</Page>
+    </Dialogue>
+
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>So... are you going to talk or what?</Text>
         <DialogueTarget>Start</DialogueTarget>
       </DialogueOption>
     </DialogueOptionsList>

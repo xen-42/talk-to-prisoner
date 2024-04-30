@@ -25,26 +25,26 @@ namespace TalkToPrisoner
 
         private void Start()
         {
-            // Starting here, you'll have access to OWML's mod helper.
-            ModHelper.Console.WriteLine($"My mod {nameof(TalkToPrisoner)} is loaded!", MessageType.Success);
+            Log($"{nameof(TalkToPrisoner)} is loaded!");
 
-            Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
-
-            // Get the New Horizons API and load configs
             NewHorizons = ModHelper.Interaction.TryGetModApi<INewHorizons>("xen.NewHorizons");
 
             // Example of accessing game code.
             LoadManager.OnCompleteSceneLoad += (scene, loadScene) =>
             {
+                // NH really can't handle ghost birds well and can't find the prisoner on the first frame when you do this normally
                 FireOnNextUpdate(() =>
                 {
                     var prisoner = GameObject.FindObjectOfType<PrisonerBrain>().gameObject.GetComponentInChildren<CharacterDialogueTree>();
-                    var dialogueAssetName = prisoner._xmlCharacterDialogueAsset.name;
-                    var xml = File.ReadAllText(ModHelper.Manifest.ModFolderPath + "/planets/dialogue.xml");
-                    var dialogueInfo = "{ \"pathToExistingDialogue\": \"" + GetPath(prisoner.transform).Remove(0, "DreamWorld_Body/".Length) + "\", \"xmlFile\": \"planets/dialogue.xml\" }";
-                    NewHorizons.CreateDialogueFromXML(dialogueAssetName, xml, dialogueInfo, Locator.GetAstroObject(AstroObject.Name.DreamWorld).gameObject);
-                });
+                    var path = GetPath(prisoner.transform).Remove(0, "DreamWorld_Body/".Length);
+                    
+                    var id = prisoner._xmlCharacterDialogueAsset.name;
+                    var xml = File.ReadAllText(ModHelper.Manifest.ModFolderPath + "/dialogue/prisoner.xml");
+                    var dialogueInfo = "{ \"pathToExistingDialogue\": \"" + path + "\", \"xmlFile\": \"planets/dialogue.xml\" }";
+                    var dreamworld = Locator.GetAstroObject(AstroObject.Name.DreamWorld).gameObject;
 
+                    NewHorizons.CreateDialogueFromXML(id, xml, dialogueInfo, dreamworld);
+                });
             };
         }
 
