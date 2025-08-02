@@ -1,6 +1,5 @@
-haha i copied the repo from gabbro mod
+## Talk to Prisoner
 
-Todo:
-After speaking to the prisoner:
-- Replace Stranger with Gromboville in ship logs, inhabitant with Grombo
-- Rename Artifact to Grombofact
+![](https://github.com/user-attachments/assets/1e427d65-71b9-4212-9156-622a11aa42d2)
+
+Let's you talk to the prisoner to learn all the secrets of the universe! Very serious and good.
