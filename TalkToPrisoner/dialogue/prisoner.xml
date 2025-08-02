@@ -76,6 +76,7 @@
       <Page>In our native language, also called Grombo, Grombo means "guy who lives on the moon or also maybe on a space station".</Page>
       <Page>Well and then it also means "the language that the guy who lives on the moon or also maybe on a space station speaks".</Page>
      </Dialogue>
+    <SetPersistentCondition>SPOKE_TO_PRISONER_GROMBO</SetPersistentCondition>
     <DialogueTarget>Menu</DialogueTarget>
   </DialogueNode>  
   
